@@ -1,0 +1,264 @@
+splash {
+    display: block;
+    position: relative;
+    background-image: url("../../images/field.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70%;
+    top: 15%;
+    overflow: hidden;
+
+    &.animate-over {
+        > div {
+            > *:not(button) {
+                display: none;
+            }
+
+            > button {
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+
+    &.animate {
+        > div {
+            > span:nth-of-type(1) {
+                animation: impact 1s ease-out;
+                animation-delay: 1.5s;
+            }
+
+            span:nth-of-type(2) {
+                animation: impact 1s ease-out;
+                animation-delay: 2.4s;
+            }
+
+            span:nth-of-type(3) {
+                animation: impact 1s ease-out;
+                animation-delay: 3.3s;
+            }
+
+            span:nth-of-type(4) {
+                animation: impact 2s ease-out;
+                animation-delay: 4.2s;
+            }
+
+            span:nth-of-type(5) {
+                animation: impact 2s ease-out;
+                animation-delay: 6.1s;
+            }
+
+            span:nth-of-type(6) {
+                animation: impact 3s ease-out;
+                animation-delay: 8s;
+            }
+
+            img:nth-of-type(1) {
+                animation: fade-in-out 1s ease-in-out;
+                animation-delay: 11s;
+            }
+
+            img:nth-of-type(2) {
+                animation: fade-in-out 1s ease-in-out;
+                animation-delay: 11.9s;
+            }
+
+            img:nth-of-type(3) {
+                animation: fade-in-out 1s ease-in-out;
+                animation-delay: 12.8s;
+            }
+
+            span:nth-of-type(7) {
+                animation: impact 4s ease-out;
+                animation-delay: 13.7s;
+            }
+
+            button {
+                animation: show 0.5s ease-out;
+                animation-delay: 18s;
+            }
+        }
+    }
+
+    > div {
+        position: relative;
+        height: 100%;
+
+        > * {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateZ(0);
+            transform-origin: top left;
+            opacity: 0;
+        }
+
+        > span {
+            font-size: 150px;
+            color: #000;
+            font-family: "Sports World";
+            text-align: center;
+            text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+            white-space: nowrap;
+        }
+
+        > img {
+            max-height: 100%;
+        }
+
+        > button {
+            border-radius: 4px;
+            border: solid #868686 1px;
+            padding: 6px 12px;
+            outline: 0;
+            color: white;
+            background-color: #1e5cb9;
+            font-size: 24px;
+            box-shadow: 0px 0px 6px black;
+        }
+    }
+
+    @keyframes show {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes hide {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes impact {
+        0% {
+            opacity: 0;
+            transform: scale(20) translate(-50%, -50%) translateZ(0);        
+        }
+
+        25% {
+            opacity: 0.5;
+        }
+
+        50% {
+            opacity: 1;
+            transform: scale(1) translate(-50%, -50%) translateZ(0);
+        }
+
+        95% {
+            opacity: 1;
+            transform: scale(1) translate(-50%, -50%) translateZ(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(2) translate(-50%, -50%) translateZ(0);
+        }
+    }
+
+    @keyframes fade-in-out {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        75% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+/*
+body > div > div {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+body > div > div > div {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+body img {
+    position: absolute;
+    display: block;
+    height: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+body span {
+    font-size: 150px;
+    color: black;
+    font-family: "Sports World";
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+body span:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+}
+
+
+body 
+
+body span:nth-of-type(2) {
+    animation: impact 1s ease-out;
+    animation-delay: 2.4s;
+}
+
+body span:nth-of-type(3) {
+    animation: impact 1s ease-out;
+    animation-delay: 3.3s;
+}
+
+body span:nth-of-type(4) {
+    animation: impact 2s ease-out;
+    animation-delay: 4.2s;
+}
+
+body span:nth-of-type(5) {
+    animation: impact 2s ease-out;
+    animation-delay: 6.1s;
+}
+
+body span:nth-of-type(6) {
+    animation: impact 3s ease-out;
+    animation-delay: 8s;
+}
+
+
+body 
+*/

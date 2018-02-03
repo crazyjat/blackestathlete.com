@@ -1,4 +1,4 @@
-import { createInjectable } from "helpers/createinjectable";
+import createInjectable from "helpers/createinjectable";
 
 const deps = [
     "$routeProvider",
@@ -12,7 +12,7 @@ export default createInjectable(deps, function() {
     //  Set the default routes
     this.$routeProvider
         .when("/", {
-            template: "Hello World",
+            redirectTo: "/splash",
         })
         .when("/404", {
             template: "Not found!",

@@ -1,4 +1,6 @@
 import angular from "angular";
 import app from "app.module";
 
-angular.bootstrap(document, [ app ]);
+window.onload = function() {
+    angular.bootstrap(document, [ app ]);
+};
